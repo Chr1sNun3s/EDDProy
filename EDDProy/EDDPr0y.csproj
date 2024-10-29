@@ -1,0 +1,377 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{46442EDF-3D6F-4384-9AD9-E03059889C4B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>EDDemo</RootNamespace>
+    <AssemblyName>EDDemo</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Graphviz, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Graphviz.2.38.0.2\lib\Graphviz.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Estructuras Lineales\Clases\Listas.cs" />
+    <Compile Include="Estructuras Lineales\Clases\Nodo.cs" />
+    <Compile Include="Estructuras Lineales\Clases\Pilas.cs" />
+    <Compile Include="Estructuras No Lineales\Clases\ArbolBusqueda.cs" />
+    <Compile Include="Estructuras No Lineales\frmArboles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Estructuras No Lineales\frmArboles.Designer.cs">
+      <DependentUpon>frmArboles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Estructuras No Lineales\Clases\NodoBinario.cs" />
+    <Compile Include="frmGrafica.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGrafica.Designer.cs">
+      <DependentUpon>frmGrafica.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmInicio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmInicio.Designer.cs">
+      <DependentUpon>frmInicio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Estructuras Lineales\frmPilas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Estructuras Lineales\frmPilas.Designer.cs">
+      <DependentUpon>frmPilas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Graphviz.cs" />
+    <Compile Include="obj\Debug\.NETFramework,Version=v4.8.AssemblyAttributes.cs" />
+    <Compile Include="obj\Release\.NETFramework,Version=v4.8.AssemblyAttributes.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Estructuras No Lineales\frmArboles.resx">
+      <DependentUpon>frmArboles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGrafica.resx">
+      <DependentUpon>frmGrafica.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInicio.resx">
+      <DependentUpon>frmInicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Estructuras Lineales\frmPilas.resx">
+      <DependentUpon>frmPilas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="obj\Debug\EDDemo.Estructuras_No_Lineales.frmArboles.resources" />
+    <EmbeddedResource Include="obj\Debug\EDDemo.frmGrafica.resources" />
+    <EmbeddedResource Include="obj\Debug\EDDemo.frmInicio.resources" />
+    <EmbeddedResource Include="obj\Debug\EDDemo.frmPilas.resources" />
+    <EmbeddedResource Include="obj\Debug\EDDemo.Properties.Resources.resources" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include=".vs\EDDemo.csproj.dtbcache.json" />
+    <None Include=".vs\EDDProy.csproj.dtbcache.json" />
+    <None Include=".vs\EDDProy\FileContentIndex\ef92e58f-7d21-48cc-834c-1f751ad6e554.vsidx" />
+    <None Include=".vs\EDDProy\v17\.wsuo" />
+    <None Include=".vs\EDDProy\v17\DocumentLayout.json" />
+    <None Include=".vs\ProjectSettings.json" />
+    <None Include=".vs\slnx.sqlite" />
+    <None Include=".vs\VSWorkspaceState.json" />
+    <None Include="bin\Debug\EDDemo.exe.config" />
+    <None Include="bin\Debug\external\config6" />
+    <None Include="bin\Debug\external\gvmap.sh" />
+    <None Include="EDDProy.csproj" />
+    <None Include="external\config6" />
+    <None Include="external\gvmap.sh" />
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferences.cache" />
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="obj\Debug\EDDemo.csproj.AssemblyReference.cache" />
+    <None Include="obj\Debug\EDDemo.csproj.CopyComplete" />
+    <None Include="obj\Debug\EDDemo.csproj.CoreCompileInputs.cache" />
+    <None Include="obj\Debug\EDDemo.csproj.GenerateResource.cache" />
+    <None Include="obj\Debug\EDDPr0y.csproj.AssemblyReference.cache" />
+    <None Include="obj\Debug\EDDPr0y.csproj.CoreCompileInputs.cache" />
+    <None Include="obj\Debug\EDDPr0y.csproj.GenerateResource.cache" />
+    <None Include="obj\Debug\EDDProy.csproj.AssemblyReference.cache" />
+    <None Include="obj\Debug\EDDProy.csproj.CoreCompileInputs.cache" />
+    <None Include="obj\Debug\EDDProy.csproj.GenerateResource.cache" />
+    <None Include="obj\Debug\EDDProy.csproj.Up2Date" />
+    <None Include="obj\Release\EDDProy.csproj.AssemblyReference.cache" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\EDDemo.exe" />
+    <Content Include="bin\Debug\EDDemo.pdb" />
+    <Content Include="bin\Debug\external\acyclic.exe" />
+    <Content Include="bin\Debug\external\ANN.dll" />
+    <Content Include="bin\Debug\external\bcomps.exe" />
+    <Content Include="bin\Debug\external\brotlicommon.dll" />
+    <Content Include="bin\Debug\external\brotlidec.dll" />
+    <Content Include="bin\Debug\external\bz2.dll" />
+    <Content Include="bin\Debug\external\cairo-2.dll" />
+    <Content Include="bin\Debug\external\ccomps.exe" />
+    <Content Include="bin\Debug\external\cdt.dll" />
+    <Content Include="bin\Debug\external\cgraph++.dll" />
+    <Content Include="bin\Debug\external\cgraph.dll" />
+    <Content Include="bin\Debug\external\circo.exe" />
+    <Content Include="bin\Debug\external\cluster.exe" />
+    <Content Include="bin\Debug\external\concrt140.dll" />
+    <Content Include="bin\Debug\external\diffimg.exe" />
+    <Content Include="bin\Debug\external\dijkstra.exe" />
+    <Content Include="bin\Debug\external\dot.exe" />
+    <Content Include="bin\Debug\external\dot2gxl.exe" />
+    <Content Include="bin\Debug\external\dot_builtins.exe" />
+    <Content Include="bin\Debug\external\edgepaint.exe" />
+    <Content Include="bin\Debug\external\fdp.exe" />
+    <Content Include="bin\Debug\external\ffi-8.dll" />
+    <Content Include="bin\Debug\external\fontconfig-1.dll" />
+    <Content Include="bin\Debug\external\freetype.dll" />
+    <Content Include="bin\Debug\external\fribidi-0.dll" />
+    <Content Include="bin\Debug\external\gc.exe" />
+    <Content Include="bin\Debug\external\gdtclft.dll" />
+    <Content Include="bin\Debug\external\getopt.dll" />
+    <Content Include="bin\Debug\external\gio-2.0-0.dll" />
+    <Content Include="bin\Debug\external\glib-2.0-0.dll" />
+    <Content Include="bin\Debug\external\gml2gv.exe" />
+    <Content Include="bin\Debug\external\gmodule-2.0-0.dll" />
+    <Content Include="bin\Debug\external\gobject-2.0-0.dll" />
+    <Content Include="bin\Debug\external\graphml2gv.exe" />
+    <Content Include="bin\Debug\external\gts.dll" />
+    <Content Include="bin\Debug\external\gv2gml.exe" />
+    <Content Include="bin\Debug\external\gv2gxl.exe" />
+    <Content Include="bin\Debug\external\gvc++.dll" />
+    <Content Include="bin\Debug\external\gvc.dll" />
+    <Content Include="bin\Debug\external\gvcolor.exe" />
+    <Content Include="bin\Debug\external\gvgen.exe" />
+    <Content Include="bin\Debug\external\gvmap.exe" />
+    <Content Include="bin\Debug\external\gvpack.exe" />
+    <Content Include="bin\Debug\external\gvplugin_core.dll" />
+    <Content Include="bin\Debug\external\gvplugin_dot_layout.dll" />
+    <Content Include="bin\Debug\external\gvplugin_gd.dll" />
+    <Content Include="bin\Debug\external\gvplugin_gdiplus.dll" />
+    <Content Include="bin\Debug\external\gvplugin_kitty.dll" />
+    <Content Include="bin\Debug\external\gvplugin_neato_layout.dll" />
+    <Content Include="bin\Debug\external\gvplugin_pango.dll" />
+    <Content Include="bin\Debug\external\gvplugin_vt.dll" />
+    <Content Include="bin\Debug\external\gvplugin_webp.dll" />
+    <Content Include="bin\Debug\external\gvpr.exe" />
+    <Content Include="bin\Debug\external\gxl2dot.exe" />
+    <Content Include="bin\Debug\external\gxl2gv.exe" />
+    <Content Include="bin\Debug\external\harfbuzz.dll" />
+    <Content Include="bin\Debug\external\iconv-2.dll" />
+    <Content Include="bin\Debug\external\intl-8.dll" />
+    <Content Include="bin\Debug\external\jpeg62.dll" />
+    <Content Include="bin\Debug\external\libexpat.dll" />
+    <Content Include="bin\Debug\external\libgd.dll" />
+    <Content Include="bin\Debug\external\liblzma.dll" />
+    <Content Include="bin\Debug\external\libpng16.dll" />
+    <Content Include="bin\Debug\external\libsharpyuv.dll" />
+    <Content Include="bin\Debug\external\libwebp.dll" />
+    <Content Include="bin\Debug\external\mingle.exe" />
+    <Content Include="bin\Debug\external\mm2gv.exe" />
+    <Content Include="bin\Debug\external\msvcp140.dll" />
+    <Content Include="bin\Debug\external\msvcp140_1.dll" />
+    <Content Include="bin\Debug\external\msvcp140_2.dll" />
+    <Content Include="bin\Debug\external\msvcp140_atomic_wait.dll" />
+    <Content Include="bin\Debug\external\msvcp140_codecvt_ids.dll" />
+    <Content Include="bin\Debug\external\neato.exe" />
+    <Content Include="bin\Debug\external\nop.exe" />
+    <Content Include="bin\Debug\external\osage.exe" />
+    <Content Include="bin\Debug\external\pango-1.0-0.dll" />
+    <Content Include="bin\Debug\external\pangocairo-1.0-0.dll" />
+    <Content Include="bin\Debug\external\pangoft2-1.0-0.dll" />
+    <Content Include="bin\Debug\external\pangowin32-1.0-0.dll" />
+    <Content Include="bin\Debug\external\patchwork.exe" />
+    <Content Include="bin\Debug\external\pathplan.dll" />
+    <Content Include="bin\Debug\external\pcre2-8.dll" />
+    <Content Include="bin\Debug\external\pixman-1-0.dll" />
+    <Content Include="bin\Debug\external\prune.exe" />
+    <Content Include="bin\Debug\external\sccmap.exe" />
+    <Content Include="bin\Debug\external\sfdp.exe" />
+    <Content Include="bin\Debug\external\tcl86t.dll" />
+    <Content Include="bin\Debug\external\tcldot.dll" />
+    <Content Include="bin\Debug\external\tcldot_builtin.dll" />
+    <Content Include="bin\Debug\external\tclplan.dll" />
+    <Content Include="bin\Debug\external\tiff.dll" />
+    <Content Include="bin\Debug\external\tred.exe" />
+    <Content Include="bin\Debug\external\twopi.exe" />
+    <Content Include="bin\Debug\external\unflatten.exe" />
+    <Content Include="bin\Debug\external\vcruntime140.dll" />
+    <Content Include="bin\Debug\external\vcruntime140_1.dll" />
+    <Content Include="bin\Debug\external\xdot.dll" />
+    <Content Include="bin\Debug\external\zlib1.dll" />
+    <Content Include="bin\Debug\Graphviz.dll" />
+    <Content Include="bin\Debug\System.Configuration.ConfigurationManager.dll" />
+    <Content Include="bin\Debug\System.Configuration.ConfigurationManager.xml" />
+    <Content Include="bin\Debug\System.Runtime.CompilerServices.Unsafe.dll" />
+    <Content Include="bin\Debug\System.Runtime.CompilerServices.Unsafe.xml" />
+    <Content Include="bin\Debug\System.Security.AccessControl.dll" />
+    <Content Include="bin\Debug\System.Security.AccessControl.xml" />
+    <Content Include="bin\Debug\System.Security.Permissions.dll" />
+    <Content Include="bin\Debug\System.Security.Permissions.xml" />
+    <Content Include="bin\Debug\System.Security.Principal.Windows.dll" />
+    <Content Include="bin\Debug\System.Security.Principal.Windows.xml" />
+    <Content Include="bin\Debug\System.Threading.Tasks.Extensions.dll" />
+    <Content Include="bin\Debug\System.Threading.Tasks.Extensions.xml" />
+    <Content Include="external\acyclic.exe" />
+    <Content Include="external\ANN.dll" />
+    <Content Include="external\bcomps.exe" />
+    <Content Include="external\brotlicommon.dll" />
+    <Content Include="external\brotlidec.dll" />
+    <Content Include="external\bz2.dll" />
+    <Content Include="external\cairo-2.dll" />
+    <Content Include="external\ccomps.exe" />
+    <Content Include="external\cdt.dll" />
+    <Content Include="external\cgraph++.dll" />
+    <Content Include="external\cgraph.dll" />
+    <Content Include="external\circo.exe" />
+    <Content Include="external\cluster.exe" />
+    <Content Include="external\concrt140.dll" />
+    <Content Include="external\diffimg.exe" />
+    <Content Include="external\dijkstra.exe" />
+    <Content Include="external\dot.exe" />
+    <Content Include="external\dot2gxl.exe" />
+    <Content Include="external\dot_builtins.exe" />
+    <Content Include="external\edgepaint.exe" />
+    <Content Include="external\fdp.exe" />
+    <Content Include="external\ffi-8.dll" />
+    <Content Include="external\fontconfig-1.dll" />
+    <Content Include="external\freetype.dll" />
+    <Content Include="external\fribidi-0.dll" />
+    <Content Include="external\gc.exe" />
+    <Content Include="external\gdtclft.dll" />
+    <Content Include="external\getopt.dll" />
+    <Content Include="external\gio-2.0-0.dll" />
+    <Content Include="external\glib-2.0-0.dll" />
+    <Content Include="external\gml2gv.exe" />
+    <Content Include="external\gmodule-2.0-0.dll" />
+    <Content Include="external\gobject-2.0-0.dll" />
+    <Content Include="external\graphml2gv.exe" />
+    <Content Include="external\gts.dll" />
+    <Content Include="external\gv2gml.exe" />
+    <Content Include="external\gv2gxl.exe" />
+    <Content Include="external\gvc++.dll" />
+    <Content Include="external\gvc.dll" />
+    <Content Include="external\gvcolor.exe" />
+    <Content Include="external\gvgen.exe" />
+    <Content Include="external\gvmap.exe" />
+    <Content Include="external\gvpack.exe" />
+    <Content Include="external\gvplugin_core.dll" />
+    <Content Include="external\gvplugin_dot_layout.dll" />
+    <Content Include="external\gvplugin_gd.dll" />
+    <Content Include="external\gvplugin_gdiplus.dll" />
+    <Content Include="external\gvplugin_kitty.dll" />
+    <Content Include="external\gvplugin_neato_layout.dll" />
+    <Content Include="external\gvplugin_pango.dll" />
+    <Content Include="external\gvplugin_vt.dll" />
+    <Content Include="external\gvplugin_webp.dll" />
+    <Content Include="external\gvpr.exe" />
+    <Content Include="external\gxl2dot.exe" />
+    <Content Include="external\gxl2gv.exe" />
+    <Content Include="external\harfbuzz.dll" />
+    <Content Include="external\iconv-2.dll" />
+    <Content Include="external\intl-8.dll" />
+    <Content Include="external\jpeg62.dll" />
+    <Content Include="external\libexpat.dll" />
+    <Content Include="external\libgd.dll" />
+    <Content Include="external\liblzma.dll" />
+    <Content Include="external\libpng16.dll" />
+    <Content Include="external\libsharpyuv.dll" />
+    <Content Include="external\libwebp.dll" />
+    <Content Include="external\mingle.exe" />
+    <Content Include="external\mm2gv.exe" />
+    <Content Include="external\msvcp140.dll" />
+    <Content Include="external\msvcp140_1.dll" />
+    <Content Include="external\msvcp140_2.dll" />
+    <Content Include="external\msvcp140_atomic_wait.dll" />
+    <Content Include="external\msvcp140_codecvt_ids.dll" />
+    <Content Include="external\neato.exe" />
+    <Content Include="external\nop.exe" />
+    <Content Include="external\osage.exe" />
+    <Content Include="external\pango-1.0-0.dll" />
+    <Content Include="external\pangocairo-1.0-0.dll" />
+    <Content Include="external\pangoft2-1.0-0.dll" />
+    <Content Include="external\pangowin32-1.0-0.dll" />
+    <Content Include="external\patchwork.exe" />
+    <Content Include="external\pathplan.dll" />
+    <Content Include="external\pcre2-8.dll" />
+    <Content Include="external\pixman-1-0.dll" />
+    <Content Include="external\prune.exe" />
+    <Content Include="external\sccmap.exe" />
+    <Content Include="external\sfdp.exe" />
+    <Content Include="external\tcl86t.dll" />
+    <Content Include="external\tcldot.dll" />
+    <Content Include="external\tcldot_builtin.dll" />
+    <Content Include="external\tclplan.dll" />
+    <Content Include="external\tiff.dll" />
+    <Content Include="external\tred.exe" />
+    <Content Include="external\twopi.exe" />
+    <Content Include="external\unflatten.exe" />
+    <Content Include="external\vcruntime140.dll" />
+    <Content Include="external\vcruntime140_1.dll" />
+    <Content Include="external\xdot.dll" />
+    <Content Include="external\zlib1.dll" />
+    <Content Include="obj\Debug\EDDemo.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\EDDemo.exe" />
+    <Content Include="obj\Debug\EDDemo.pdb" />
+    <Content Include="obj\Debug\EDDPr0y.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\EDDProy.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\TempPE\Properties.Resources.Designer.cs.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Release\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
