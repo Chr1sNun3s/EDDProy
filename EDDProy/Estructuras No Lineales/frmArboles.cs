@@ -55,18 +55,6 @@ namespace EDDemo.Estructuras_No_Lineales
  
         }
 
-        private void btnLimpiar_Click(object sender, EventArgs e)
-        {
-            miArbol = null;
-            miRaiz = null;
-            miArbol = new ArbolBusqueda();
-            txtArbol.Text  = "";
-            txtDato.Text = "";
-            lblRecorridoPreOrden.Text = "";
-            lblRecorridoInOrden.Text = "";
-            lblRecorridoPostOrden.Text = "";
-        }
-
         private void btnGrafica_Click(object sender, EventArgs e)
         {
             String graphVizString;
@@ -195,5 +183,133 @@ namespace EDDemo.Estructuras_No_Lineales
 
         }
 
+        private void btnPodar_Click(object sender, EventArgs e)
+        {
+            if (miArbol.EstaVacio())
+            {
+                MessageBox.Show("Arbol vacio");
+            }
+            else
+            {
+                miArbol.PodarArbolCompleto();
+                MessageBox.Show("El arbol ha sido podado por completo");
+                miArbol.strArbol = "";
+                miArbol.MuestraArbolAcostado(1, miArbol.RegresaRaiz());
+                txtArbol.Text = miArbol.strArbol;
+            }
+        }
+
+        private void btnPredecesor_Click(object sender, EventArgs e)
+        {
+            int valor;
+            if (int.TryParse(txtDato.Text, out valor))
+            {
+                bool eliminado = miArbol.EliminarPredecesor(valor);
+
+                if (eliminado)
+                {
+                    MessageBox.Show($"El nodo con valor {valor} ha sido eliminado");
+                    miArbol.strArbol = "";
+                    miArbol.MuestraArbolAcostado(1, miArbol.RegresaRaiz());
+                    txtArbol.Text = miArbol.strArbol;
+                }
+                else
+                {
+                    MessageBox.Show($"El nodo con valor {valor} no se encuentra en el arbol");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Por favor, ingrese un valor que sea valido");
+            }
+        }
+
+        private void btnSucesor_Click(object sender, EventArgs e)
+        {
+            if (int.TryParse(txtDato.Text, out int valor))
+            {
+                bool eliminado = miArbol.EliminarSucesor(valor);
+                if (eliminado) 
+                {
+                    MessageBox.Show($"El {valor} ha sido eliminado");
+                    miArbol.strArbol = "";
+                    miArbol.MuestraArbolAcostado(1, miArbol.RegresaRaiz());
+                    txtArbol.Text = miArbol.strArbol;
+                }
+                else
+                    MessageBox.Show($"El {valor} no se encuentra en el arbol");
+            }
+            else
+            {
+                MessageBox.Show("Por favor, ingresa un valor que sea valido.");
+            }
+        }
+
+        private void btnAmplitud_Click(object sender, EventArgs e)
+        {
+            miArbol.Amplitud();
+            MessageBox.Show("Recorrido por niveles: " + miArbol.strRecorrido);
+
+        }
+
+        private void btnAltura_Click(object sender, EventArgs e)
+        {
+            miRaiz = miArbol.RegresaRaiz();
+            if (miRaiz == null)
+            {
+                MessageBox.Show("El arbol esta vacio.");
+                return;
+            }
+            int altura = miArbol.CalcularAltura(miRaiz);
+            MessageBox.Show("La altura del arbol es: " + altura);
+        }
+
+        private void btnContarHojas_Click(object sender, EventArgs e)
+        {
+            miRaiz = miArbol.RegresaRaiz();
+            if (miRaiz == null)
+            {
+                MessageBox.Show("El arbol esta vacio.");
+                return;
+            }
+
+            int numeroDeHojas = miArbol.ContarHojas(miRaiz);
+            MessageBox.Show("El numero total de hojas en el arbol es: " + numeroDeHojas);
+        }
+
+        private void btnContarNodos_Click(object sender, EventArgs e)
+        {
+            miRaiz = miArbol.RegresaRaiz();
+            if (miRaiz == null)
+            {
+                MessageBox.Show("El arbol esta vacio.");
+                return;
+            }
+
+            int numeroDeNodos = miArbol.ContarNodos(miRaiz);
+            MessageBox.Show("El numero total de nodos en el arbol es: " + numeroDeNodos);
+        }
+
+        private void btnCompleto_Click(object sender, EventArgs e)
+        {
+            miRaiz = miArbol.RegresaRaiz();
+            if (miArbol.EsCompleto(miRaiz))
+            {
+                MessageBox.Show("El arbol es completo.");
+            }
+            else
+            {
+                MessageBox.Show("El arbol no es completo.");
+            }
+        }
+
+        private void btnLleno_Click(object sender, EventArgs e)
+        {
+            miRaiz = miArbol.RegresaRaiz();
+            if (miArbol.esLleno(miRaiz))
+                MessageBox.Show("El arbol está lleno.");
+            else
+                MessageBox.Show("El arbol no está lleno.");
+        }
     }
 }
