@@ -233,27 +233,33 @@ namespace EDDemo.Estructuras_No_Lineales
             }
             return nodo;
         }
-        public void Amplitud()
+        public void Amplitud(NodoBinario nodoRaiz)
         {
-            if (Raiz == null)
+            if (nodoRaiz == null)
             {
-                strRecorrido = "El árbol está vacío.";
+                Console.WriteLine("El arbol esta vacio");
                 return;
             }
 
-            Queue<NodoBinario> cola = new Queue<NodoBinario>();
-            cola.Enqueue(Raiz);
-            strRecorrido = "";
+            Colas colaAuxiliar = new Colas();
+            colaAuxiliar.Enqueue(nodoRaiz); 
 
-            while (cola.Count > 0)
+            while (!colaAuxiliar.IsEmpty())
             {
-                NodoBinario nodoActual = cola.Dequeue();
-                strRecorrido += nodoActual.Dato + " ";
-
+            
+                NodoBinario nodoActual = (NodoBinario) colaAuxiliar.Dequeue();
+              
+                Console.WriteLine(nodoActual.Dato);
+            
                 if (nodoActual.Izq != null)
-                    cola.Enqueue(nodoActual.Izq);
+                {
+                    colaAuxiliar.Enqueue(nodoActual.Izq);
+                }
+
                 if (nodoActual.Der != null)
-                    cola.Enqueue(nodoActual.Der);
+                {
+                    colaAuxiliar.Enqueue(nodoActual.Der);
+                }
             }
         }
 
@@ -290,37 +296,37 @@ namespace EDDemo.Estructuras_No_Lineales
         public bool EsCompleto(NodoBinario nodoPtr)
         {
             if (nodoPtr == null)
-                return true; 
-            Queue<NodoBinario> colaAuxiliar = new Queue<NodoBinario>();
-            colaAuxiliar.Enqueue(nodoPtr);
+                return true;
+            
+            Colas colaAuxiliar = new Colas();
+            colaAuxiliar.Enqueue(nodoPtr);  
             bool nodoNolleno = false; 
-            while (colaAuxiliar.Count > 0)
-            {
-                NodoBinario nodoActual = colaAuxiliar.Dequeue();
-               
+            while (!colaAuxiliar.IsEmpty())  
+            {              
+                NodoBinario nodoActual = (NodoBinario)Convert.ChangeType(colaAuxiliar.Dequeue(), typeof(NodoBinario));             
                 if (nodoActual.Izq != null)
                 {
                     if (nodoNolleno)
-                        return false;
-                    colaAuxiliar.Enqueue(nodoActual.Izq);
+                        return false;  
+                    colaAuxiliar.Enqueue(nodoActual.Izq);  
                 }
                 else
                 {
-                    nodoNolleno = true; 
+                    nodoNolleno = true;  
                 }
-
+                
                 if (nodoActual.Der != null)
                 {
                     if (nodoNolleno)
-                        return false; 
-                    colaAuxiliar.Enqueue(nodoActual.Der);
+                        return false;  
+                    colaAuxiliar.Enqueue(nodoActual.Der);  
                 }
                 else
                 {
-                    nodoNolleno = true; 
+                    nodoNolleno = true;  
                 }
             }
-            return true; 
+            return true;
         }
 
         public bool esLleno(NodoBinario nodo)

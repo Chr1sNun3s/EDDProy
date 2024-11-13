@@ -247,7 +247,12 @@ namespace EDDemo.Estructuras_No_Lineales
 
         private void btnAmplitud_Click(object sender, EventArgs e)
         {
-            miArbol.Amplitud();
+            miRaiz = miArbol.RegresaRaiz(); 
+            {
+                MessageBox.Show("El arbol esta vacio.");
+                return;
+            }
+            miArbol.Amplitud(miRaiz);
             MessageBox.Show("Recorrido por niveles: " + miArbol.strRecorrido);
 
         }

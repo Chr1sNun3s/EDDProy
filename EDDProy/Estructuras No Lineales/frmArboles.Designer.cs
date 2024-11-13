@@ -230,7 +230,7 @@ namespace EDDemo.Estructuras_No_Lineales
             this.btnPodar.Name = "btnPodar";
             this.btnPodar.Size = new System.Drawing.Size(62, 35);
             this.btnPodar.TabIndex = 16;
-            this.btnPodar.Text = "Podar Arbol";
+            this.btnPodar.Text = "Limpiar";
             this.btnPodar.UseVisualStyleBackColor = true;
             this.btnPodar.Click += new System.EventHandler(this.btnPodar_Click);
             // 
