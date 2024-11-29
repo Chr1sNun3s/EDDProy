@@ -74,6 +74,18 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Estructuras Lineales\frmColas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Estructuras Lineales\frmColas.Designer.cs">
+      <DependentUpon>frmColas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Estructuras Lineales\frmListas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Estructuras Lineales\frmListas.Designer.cs">
+      <DependentUpon>frmListas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Estructuras Lineales\Clases\Colas.cs" />
     <Compile Include="Estructuras Lineales\Clases\Listas.cs" />
@@ -444,6 +456,10 @@
     <Content Include="external\zlib1.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Algoritmos de ordenamiento\Clases\" />
+    <Folder Include="Algoritmos recursivos\Clases\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
