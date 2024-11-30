@@ -10,8 +10,7 @@ namespace EDDemo
     {
         public void Insertar()
         {
-            Nodo Nuevo = new Nodo();
-            Nuevo.sig = null;
+            
 
 
         }

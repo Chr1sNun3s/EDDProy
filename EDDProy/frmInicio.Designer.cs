@@ -88,12 +88,14 @@ namespace EDDemo
             this.colasToolStripMenuItem.Name = "colasToolStripMenuItem";
             this.colasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.colasToolStripMenuItem.Text = "Colas";
+            this.colasToolStripMenuItem.Click += new System.EventHandler(this.colasToolStripMenuItem_Click);
             // 
             // listasToolStripMenuItem
             // 
             this.listasToolStripMenuItem.Name = "listasToolStripMenuItem";
             this.listasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.listasToolStripMenuItem.Text = "Listas";
+            this.listasToolStripMenuItem.Click += new System.EventHandler(this.listasToolStripMenuItem_Click);
             // 
             // estructurasNoLibealesToolStripMenuItem
             // 

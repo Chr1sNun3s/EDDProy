@@ -10,5 +10,11 @@ namespace EDDemo
     {
         public String Dato;
         public Nodo sig;
+
+        public Nodo(string dato)
+        {
+            this.Dato = dato;
+            this.sig = null;  
+        }
     }
 }

@@ -16,5 +16,10 @@ namespace EDDemo
         {
             InitializeComponent();
         }
+
+        private void frmColas_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
