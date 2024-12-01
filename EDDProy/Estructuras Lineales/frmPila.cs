@@ -68,39 +68,7 @@ namespace EDDemo.Estructuras_Lineales
             {
                 MessageBox.Show("La pila está vacía.");
             }
-        }
-
-        private void BtnBuscar_Click(object sender, EventArgs e)
-        {
-            bool encontrado = false;
-            int dato;           
-            if (int.TryParse(txtDato.Text, out dato))
-            {
-                Nodo actual = pila.ObtenerTop(); 
-                while (actual != null)
-                {
-                    
-                    if (actual.Dato.ToString() == dato.ToString())
-                    {
-                        encontrado = true;
-                        break;
-                    }
-                    actual = actual.sig;  
-                }
-                if (encontrado)
-                {
-                    MessageBox.Show($"Dato {dato} encontrado.");
-                }
-                else
-                {
-                    MessageBox.Show($"Dato {dato} no encontrado.");
-                }
-            }
-            else
-            {
-                MessageBox.Show("Por favor ingrese un número válido.");
-            }
-        }
+        }       
     }
 }
 

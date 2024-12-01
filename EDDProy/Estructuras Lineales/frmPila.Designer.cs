@@ -32,7 +32,6 @@ namespace EDDemo.Estructuras_Lineales
             this.BtnPop = new System.Windows.Forms.Button();
             this.BtnPush = new System.Windows.Forms.Button();
             this.BtnMostrar = new System.Windows.Forms.Button();
-            this.BtnBuscar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.lstPila = new System.Windows.Forms.ListBox();
             this.txtDato = new System.Windows.Forms.TextBox();
@@ -40,7 +39,7 @@ namespace EDDemo.Estructuras_Lineales
             // 
             // BtnPop
             // 
-            this.BtnPop.Location = new System.Drawing.Point(174, 80);
+            this.BtnPop.Location = new System.Drawing.Point(270, 80);
             this.BtnPop.Name = "BtnPop";
             this.BtnPop.Size = new System.Drawing.Size(75, 23);
             this.BtnPop.TabIndex = 0;
@@ -50,7 +49,7 @@ namespace EDDemo.Estructuras_Lineales
             // 
             // BtnPush
             // 
-            this.BtnPush.Location = new System.Drawing.Point(174, 41);
+            this.BtnPush.Location = new System.Drawing.Point(270, 41);
             this.BtnPush.Name = "BtnPush";
             this.BtnPush.Size = new System.Drawing.Size(75, 23);
             this.BtnPush.TabIndex = 1;
@@ -60,23 +59,13 @@ namespace EDDemo.Estructuras_Lineales
             // 
             // BtnMostrar
             // 
-            this.BtnMostrar.Location = new System.Drawing.Point(174, 125);
+            this.BtnMostrar.Location = new System.Drawing.Point(270, 125);
             this.BtnMostrar.Name = "BtnMostrar";
             this.BtnMostrar.Size = new System.Drawing.Size(75, 23);
             this.BtnMostrar.TabIndex = 2;
             this.BtnMostrar.Text = "Mostrar";
             this.BtnMostrar.UseVisualStyleBackColor = true;
             this.BtnMostrar.Click += new System.EventHandler(this.BtnMostrar_Click);
-            // 
-            // BtnBuscar
-            // 
-            this.BtnBuscar.Location = new System.Drawing.Point(174, 163);
-            this.BtnBuscar.Name = "BtnBuscar";
-            this.BtnBuscar.Size = new System.Drawing.Size(75, 23);
-            this.BtnBuscar.TabIndex = 3;
-            this.BtnBuscar.Text = "Buscar";
-            this.BtnBuscar.UseVisualStyleBackColor = true;
-            this.BtnBuscar.Click += new System.EventHandler(this.BtnBuscar_Click);
             // 
             // label1
             // 
@@ -90,9 +79,9 @@ namespace EDDemo.Estructuras_Lineales
             // lstPila
             // 
             this.lstPila.FormattingEnabled = true;
-            this.lstPila.Location = new System.Drawing.Point(12, 80);
+            this.lstPila.Location = new System.Drawing.Point(16, 80);
             this.lstPila.Name = "lstPila";
-            this.lstPila.Size = new System.Drawing.Size(152, 95);
+            this.lstPila.Size = new System.Drawing.Size(224, 95);
             this.lstPila.TabIndex = 5;
             // 
             // txtDato
@@ -104,11 +93,10 @@ namespace EDDemo.Estructuras_Lineales
             // 
             // frmPila
             // 
-            this.ClientSize = new System.Drawing.Size(284, 261);
+            this.ClientSize = new System.Drawing.Size(438, 282);
             this.Controls.Add(this.txtDato);
             this.Controls.Add(this.lstPila);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.BtnBuscar);
             this.Controls.Add(this.BtnMostrar);
             this.Controls.Add(this.BtnPush);
             this.Controls.Add(this.BtnPop);
@@ -124,7 +112,6 @@ namespace EDDemo.Estructuras_Lineales
         private System.Windows.Forms.Button BtnPop;
         private System.Windows.Forms.Button BtnPush;
         private System.Windows.Forms.Button BtnMostrar;
-        private System.Windows.Forms.Button BtnBuscar;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ListBox lstPila;
         private System.Windows.Forms.TextBox txtDato;
