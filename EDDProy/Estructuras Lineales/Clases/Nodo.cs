@@ -17,4 +17,15 @@ namespace EDDemo
             this.sig = null;  
         }
     }
+    public class NodoC
+    {
+        public string Dat;
+        public NodoC siguiente;
+
+        public NodoC(string dat)
+        {
+            this.Dat = dat;
+            this.siguiente = null;
+        }
+    }
 }

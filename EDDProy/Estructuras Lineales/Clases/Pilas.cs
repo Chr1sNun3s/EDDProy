@@ -21,7 +21,7 @@ namespace EDDemo
         }
         public void Push(int dato, ListBox lstPila)
         {
-            Nodo nuevo = new Nodo("dato");
+            Nodo nuevo = new Nodo(" "+dato);
             nuevo.sig = top;
             top = nuevo;
         

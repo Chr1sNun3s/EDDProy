@@ -30,7 +30,7 @@ namespace EDDemo.Estructuras_Lineales
         {
             if (int.TryParse(txtDato.Text, out int dato))
             {
-                listaS.Push("dato "+1);
+                listaS.Push(" "+ dato);
                 MessageBox.Show($"Dato {dato} insertado.");
                 txtDato.Clear();
             }
