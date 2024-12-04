@@ -30,6 +30,7 @@ namespace EDDemo
         private void InitializeComponent()
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.algoritmosRecursivosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.estructurasLinealesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pilasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.colasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -46,7 +47,12 @@ namespace EDDemo
             this.intercalacionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mezclaDirectaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mezclaNaturalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.algoritmosRecursivosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.factorialDeUnNumeroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.calculoDeUnExponenteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sumarLosElementosDeUnArregloToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.secuenciaDeFibonacciToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.busquedaBinariaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.torreDeHanoiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -64,6 +70,19 @@ namespace EDDemo
             this.menuStrip1.Size = new System.Drawing.Size(684, 24);
             this.menuStrip1.TabIndex = 3;
             this.menuStrip1.Text = "menuStrip1";
+            // 
+            // algoritmosRecursivosToolStripMenuItem
+            // 
+            this.algoritmosRecursivosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.factorialDeUnNumeroToolStripMenuItem,
+            this.calculoDeUnExponenteToolStripMenuItem,
+            this.sumarLosElementosDeUnArregloToolStripMenuItem,
+            this.secuenciaDeFibonacciToolStripMenuItem,
+            this.busquedaBinariaToolStripMenuItem,
+            this.torreDeHanoiToolStripMenuItem});
+            this.algoritmosRecursivosToolStripMenuItem.Name = "algoritmosRecursivosToolStripMenuItem";
+            this.algoritmosRecursivosToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
+            this.algoritmosRecursivosToolStripMenuItem.Text = "Algoritmos Recursivos";
             // 
             // estructurasLinealesToolStripMenuItem
             // 
@@ -108,7 +127,7 @@ namespace EDDemo
             // arbolesToolStripMenuItem
             // 
             this.arbolesToolStripMenuItem.Name = "arbolesToolStripMenuItem";
-            this.arbolesToolStripMenuItem.Size = new System.Drawing.Size(114, 22);
+            this.arbolesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.arbolesToolStripMenuItem.Text = "Arboles";
             this.arbolesToolStripMenuItem.Click += new System.EventHandler(this.arbolesToolStripMenuItem_Click);
             // 
@@ -129,7 +148,7 @@ namespace EDDemo
             this.shellsortToolStripMenuItem,
             this.radixToolStripMenuItem});
             this.internosToolStripMenuItem.Name = "internosToolStripMenuItem";
-            this.internosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.internosToolStripMenuItem.Size = new System.Drawing.Size(119, 22);
             this.internosToolStripMenuItem.Text = "Internos";
             // 
             // burbujaToolStripMenuItem
@@ -163,7 +182,7 @@ namespace EDDemo
             this.mezclaDirectaToolStripMenuItem,
             this.mezclaNaturalToolStripMenuItem});
             this.externosToolStripMenuItem.Name = "externosToolStripMenuItem";
-            this.externosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.externosToolStripMenuItem.Size = new System.Drawing.Size(119, 22);
             this.externosToolStripMenuItem.Text = "Externos";
             // 
             // intercalacionToolStripMenuItem
@@ -184,11 +203,47 @@ namespace EDDemo
             this.mezclaNaturalToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
             this.mezclaNaturalToolStripMenuItem.Text = "Mezcla natural";
             // 
-            // algoritmosRecursivosToolStripMenuItem
+            // factorialDeUnNumeroToolStripMenuItem
             // 
-            this.algoritmosRecursivosToolStripMenuItem.Name = "algoritmosRecursivosToolStripMenuItem";
-            this.algoritmosRecursivosToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
-            this.algoritmosRecursivosToolStripMenuItem.Text = "Algoritmos Recursivos";
+            this.factorialDeUnNumeroToolStripMenuItem.Name = "factorialDeUnNumeroToolStripMenuItem";
+            this.factorialDeUnNumeroToolStripMenuItem.Size = new System.Drawing.Size(256, 22);
+            this.factorialDeUnNumeroToolStripMenuItem.Text = "Factorial de un numero";
+            this.factorialDeUnNumeroToolStripMenuItem.Click += new System.EventHandler(this.factorialDeUnNumeroToolStripMenuItem_Click);
+            // 
+            // calculoDeUnExponenteToolStripMenuItem
+            // 
+            this.calculoDeUnExponenteToolStripMenuItem.Name = "calculoDeUnExponenteToolStripMenuItem";
+            this.calculoDeUnExponenteToolStripMenuItem.Size = new System.Drawing.Size(256, 22);
+            this.calculoDeUnExponenteToolStripMenuItem.Text = "Calculo de un exponente";
+            this.calculoDeUnExponenteToolStripMenuItem.Click += new System.EventHandler(this.calculoDeUnExponenteToolStripMenuItem_Click);
+            // 
+            // sumarLosElementosDeUnArregloToolStripMenuItem
+            // 
+            this.sumarLosElementosDeUnArregloToolStripMenuItem.Name = "sumarLosElementosDeUnArregloToolStripMenuItem";
+            this.sumarLosElementosDeUnArregloToolStripMenuItem.Size = new System.Drawing.Size(256, 22);
+            this.sumarLosElementosDeUnArregloToolStripMenuItem.Text = "sumar los elementos de un arreglo";
+            this.sumarLosElementosDeUnArregloToolStripMenuItem.Click += new System.EventHandler(this.sumarLosElementosDeUnArregloToolStripMenuItem_Click);
+            // 
+            // secuenciaDeFibonacciToolStripMenuItem
+            // 
+            this.secuenciaDeFibonacciToolStripMenuItem.Name = "secuenciaDeFibonacciToolStripMenuItem";
+            this.secuenciaDeFibonacciToolStripMenuItem.Size = new System.Drawing.Size(256, 22);
+            this.secuenciaDeFibonacciToolStripMenuItem.Text = "Secuencia de Fibonacci";
+            this.secuenciaDeFibonacciToolStripMenuItem.Click += new System.EventHandler(this.secuenciaDeFibonacciToolStripMenuItem_Click);
+            // 
+            // busquedaBinariaToolStripMenuItem
+            // 
+            this.busquedaBinariaToolStripMenuItem.Name = "busquedaBinariaToolStripMenuItem";
+            this.busquedaBinariaToolStripMenuItem.Size = new System.Drawing.Size(256, 22);
+            this.busquedaBinariaToolStripMenuItem.Text = "Busqueda binaria";
+            this.busquedaBinariaToolStripMenuItem.Click += new System.EventHandler(this.busquedaBinariaToolStripMenuItem_Click);
+            // 
+            // torreDeHanoiToolStripMenuItem
+            // 
+            this.torreDeHanoiToolStripMenuItem.Name = "torreDeHanoiToolStripMenuItem";
+            this.torreDeHanoiToolStripMenuItem.Size = new System.Drawing.Size(256, 22);
+            this.torreDeHanoiToolStripMenuItem.Text = "Torre de Hanoi";
+            this.torreDeHanoiToolStripMenuItem.Click += new System.EventHandler(this.torreDeHanoiToolStripMenuItem_Click);
             // 
             // frmInicio
             // 
@@ -228,6 +283,12 @@ namespace EDDemo
         private System.Windows.Forms.ToolStripMenuItem mezclaDirectaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem mezclaNaturalToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem algoritmosRecursivosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem factorialDeUnNumeroToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem calculoDeUnExponenteToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem sumarLosElementosDeUnArregloToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem secuenciaDeFibonacciToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem busquedaBinariaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem torreDeHanoiToolStripMenuItem;
     }
 }
 

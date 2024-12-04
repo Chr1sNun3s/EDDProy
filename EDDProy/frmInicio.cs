@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using EDDemo.Estructuras_Lineales;
 using EDDemo.Estructuras_No_Lineales;
+using EDDemo.Algoritmos_recursivos;
 
 namespace EDDemo
 {
@@ -60,6 +61,48 @@ namespace EDDemo
             frmListas mListas = new frmListas();
             mListas.MdiParent = this;
             mListas.Show();
+        }
+
+        private void factorialDeUnNumeroToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmFactorial mFactorial = new frmFactorial();
+            mFactorial.MdiParent = this;
+            mFactorial.Show();
+        }
+
+        private void calculoDeUnExponenteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmExponente mExponente = new frmExponente();
+            mExponente.MdiParent = this;
+            mExponente.Show();
+        }
+
+        private void sumarLosElementosDeUnArregloToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmSumaArreglo mArreglo = new frmSumaArreglo();
+            mArreglo.MdiParent = this;
+            mArreglo.Show();
+        }
+
+        private void secuenciaDeFibonacciToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmFibonacci mFibonacci = new frmFibonacci();
+            mFibonacci.MdiParent = this;
+            mFibonacci.Show();
+        }
+
+        private void busquedaBinariaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmBusquedaBinaria mBusqueda = new frmBusquedaBinaria();
+            mBusqueda.MdiParent = this;
+            mBusqueda.Show();
+        }
+
+        private void torreDeHanoiToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmHanoi mHanoi = new frmHanoi();
+            mHanoi.MdiParent = this;
+            mHanoi.Show();
         }
     }
 }
