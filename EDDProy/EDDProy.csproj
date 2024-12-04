@@ -182,11 +182,23 @@
     </Compile>
     <Compile Include="Graphviz.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Algoritmos recursivos\frmBusquedaBinaria.resx">
+      <DependentUpon>frmBusquedaBinaria.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Algoritmos recursivos\frmExponente.resx">
       <DependentUpon>frmExponente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Algoritmos recursivos\frmFactorial.resx">
       <DependentUpon>frmFactorial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Algoritmos recursivos\frmFibonacci.resx">
+      <DependentUpon>frmFibonacci.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Algoritmos recursivos\frmHanoi.resx">
+      <DependentUpon>frmHanoi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Algoritmos recursivos\frmSumaArreglo.resx">
+      <DependentUpon>frmSumaArreglo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Estructuras Lineales\frmColas.resx">
       <DependentUpon>frmColas.cs</DependentUpon>

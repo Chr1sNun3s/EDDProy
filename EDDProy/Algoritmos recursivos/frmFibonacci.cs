@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EDDemo.Algoritmos_recursivos.Clases;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,5 +17,31 @@ namespace EDDemo.Algoritmos_recursivos
         {
             InitializeComponent();
         }
+
+        private void btnCalcular_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Fibonacci.ResetOperaciones();            
+                int n = int.Parse(txtNumero.Text);
+
+                if (n < 0)
+                {
+                    MessageBox.Show("El número debe ser mayor o igual a 0.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+                var secuencia = Fibonacci.Calcular(n);
+                lstSecuencia.Items.Clear();
+                for (int i = 0; i <= n; i++)
+                {
+                    lstSecuencia.Items.Add($"F({i}) = {secuencia[i]}");
+                }               
+                lblOperaciones.Text = $"Operaciones: {Fibonacci.Operaciones}";
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error: {ex.Message}");
+            }
+        }      
     }
 }
