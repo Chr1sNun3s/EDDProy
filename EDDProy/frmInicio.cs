@@ -12,6 +12,7 @@ using EDDemo.Estructuras_No_Lineales;
 using EDDemo.Algoritmos_recursivos;
 using EDDemo.Algoritmos_de_ordenamiento;
 using EDDemo.Algoritmos_de_ordenamiento.Clases;
+using EDDemo.Algoritmos_de_busqueda;
 
 namespace EDDemo
 {
@@ -138,6 +139,20 @@ namespace EDDemo
         private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
 
+        }
+
+        private void busquedaHashToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmHash mHash = new frmHash();
+            mHash.MdiParent = this;
+            mHash.Show();
+        }
+
+        private void busquedaBinariaToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            frmBusquedaBi mBusquedaBi = new frmBusquedaBi();
+            mBusquedaBi.MdiParent = this;
+            mBusquedaBi.Show();
         }
     }
 }

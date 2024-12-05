@@ -8,13 +8,13 @@ namespace EDDemo.Algoritmos_de_ordenamiento.Clases
 {
     public class QuickSort
     {
-        public static void Sort(int[] array, int izq, int der)
+        public static void Sort(int[] arreglo, int izq, int der)
         {
             if (izq < der)
             {
-                int particionIndex = Particion(array, izq, der);
-                Sort(array, izq, particionIndex - 1);
-                Sort(array, particionIndex + 1, der);
+                int particionIndex = Particion(arreglo, izq, der);
+                Sort(arreglo, izq, particionIndex - 1);
+                Sort(arreglo, particionIndex + 1, der);
             }
         }
 

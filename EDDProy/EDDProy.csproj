@@ -75,6 +75,20 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Algoritmos de busqueda\Clases\BusquedaBi.cs" />
+    <Compile Include="Algoritmos de busqueda\Clases\Hash.cs" />
+    <Compile Include="Algoritmos de busqueda\frmBusquedaBi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Algoritmos de busqueda\frmBusquedaBi.Designer.cs">
+      <DependentUpon>frmBusquedaBi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Algoritmos de busqueda\frmHash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Algoritmos de busqueda\frmHash.Designer.cs">
+      <DependentUpon>frmHash.cs</DependentUpon>
+    </Compile>
     <Compile Include="Algoritmos de ordenamiento\Clases\Burbuja.cs" />
     <Compile Include="Algoritmos de ordenamiento\frmQuickSort.cs">
       <SubType>Form</SubType>
@@ -210,6 +224,12 @@
     </Compile>
     <Compile Include="Graphviz.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Algoritmos de busqueda\frmBusquedaBi.resx">
+      <DependentUpon>frmBusquedaBi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Algoritmos de busqueda\frmHash.resx">
+      <DependentUpon>frmHash.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Algoritmos de ordenamiento\frmBurbuja.resx">
       <DependentUpon>frmBurbuja.cs</DependentUpon>
     </EmbeddedResource>
@@ -593,8 +613,6 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Algoritmos de busqueda\Clases\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
