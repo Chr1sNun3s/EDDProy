@@ -10,6 +10,8 @@ using System.Windows.Forms;
 using EDDemo.Estructuras_Lineales;
 using EDDemo.Estructuras_No_Lineales;
 using EDDemo.Algoritmos_recursivos;
+using EDDemo.Algoritmos_de_ordenamiento;
+using EDDemo.Algoritmos_de_ordenamiento.Clases;
 
 namespace EDDemo
 {
@@ -103,6 +105,39 @@ namespace EDDemo
             frmHanoi mHanoi = new frmHanoi();
             mHanoi.MdiParent = this;
             mHanoi.Show();
+        }
+
+        private void burbujaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmBurbuja mBurbuja = new frmBurbuja();
+            mBurbuja.MdiParent = this;
+            mBurbuja.Show();
+        }
+
+        private void quicksortToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmQuickSort mQuickSort = new frmQuickSort();
+            mQuickSort.MdiParent = this;
+            mQuickSort.Show();
+        }
+
+        private void shellsortToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmShellSort mShellSort = new frmShellSort();  
+            mShellSort.MdiParent = this;
+            mShellSort.Show();
+        }
+
+        private void radixToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmRadixSort mRadixSort = new frmRadixSort();
+            mRadixSort.MdiParent = this;
+            mRadixSort.Show();
+        }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
         }
     }
 }

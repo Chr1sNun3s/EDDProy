@@ -88,6 +88,7 @@
             this.txtExponente.Name = "txtExponente";
             this.txtExponente.Size = new System.Drawing.Size(100, 20);
             this.txtExponente.TabIndex = 5;
+            this.txtExponente.TextChanged += new System.EventHandler(this.txtExponente_TextChanged);
             // 
             // lblOperaciones
             // 

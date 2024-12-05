@@ -35,5 +35,10 @@ namespace EDDemo.Algoritmos_recursivos
                 MessageBox.Show($"Error: {ex.Message}");
             }
         }
+
+        private void txtExponente_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
