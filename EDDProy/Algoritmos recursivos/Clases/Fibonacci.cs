@@ -24,7 +24,7 @@ namespace EDDemo.Algoritmos_recursivos.Clases
             for (int i = 2; i <= n; i++)
             {
                 secuencia[i] = secuencia[i - 1] + secuencia[i - 2];
-                Operaciones += 2; // Una suma y una asignación
+                Operaciones += 2; 
             }
             return secuencia;
         }

@@ -84,5 +84,10 @@ namespace EDDemo.Algoritmos_recursivos
             arregloOrdenado = null;
             txtArreglo.Focus();
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

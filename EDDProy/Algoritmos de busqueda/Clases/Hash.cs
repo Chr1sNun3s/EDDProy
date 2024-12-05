@@ -48,6 +48,14 @@ namespace EDDemo.Algoritmos_de_busqueda.Clases
 
             return "No encontrado";
         }
+
+        public void Clear()
+        {
+            for (int i = 0; i < _tam; i++)
+            {
+                _tabla[i].Clear();
+            }
+        }
         private int HashFunction(int key)
         {
             return key % _tam;

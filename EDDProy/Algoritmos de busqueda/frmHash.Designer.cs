@@ -37,6 +37,8 @@
             this.txtValor = new System.Windows.Forms.TextBox();
             this.txtBuscarClave = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.btnCargarArchivo = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnIngresar
@@ -118,11 +120,27 @@
             this.label3.TabIndex = 8;
             this.label3.Text = "Clave:";
             // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            this.openFileDialog1.FileOk += new System.ComponentModel.CancelEventHandler(this.openFileDialog1_FileOk);
+            // 
+            // btnCargarArchivo
+            // 
+            this.btnCargarArchivo.Location = new System.Drawing.Point(248, 108);
+            this.btnCargarArchivo.Name = "btnCargarArchivo";
+            this.btnCargarArchivo.Size = new System.Drawing.Size(84, 23);
+            this.btnCargarArchivo.TabIndex = 9;
+            this.btnCargarArchivo.Text = "Cargar archivo";
+            this.btnCargarArchivo.UseVisualStyleBackColor = true;
+            this.btnCargarArchivo.Click += new System.EventHandler(this.btnCargarArchivo_Click);
+            // 
             // frmHash
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(425, 297);
+            this.Controls.Add(this.btnCargarArchivo);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtBuscarClave);
             this.Controls.Add(this.txtValor);
@@ -150,5 +168,7 @@
         private System.Windows.Forms.TextBox txtValor;
         private System.Windows.Forms.TextBox txtBuscarClave;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.Button btnCargarArchivo;
     }
 }
