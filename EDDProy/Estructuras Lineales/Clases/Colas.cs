@@ -10,7 +10,7 @@ namespace EDDemo
 {
     public class Colas
     {
-        private NodoBinario primero;
+        public NodoBinario primero;
         private NodoBinario ultimo;
 
         public Colas()
@@ -55,5 +55,23 @@ namespace EDDemo
         {
             return primero == null;
         }
+
+        public bool Buscar(int valor)
+        {
+            NodoBinario actual = primero;
+
+            while (actual != null)
+            {
+                if (actual.Dato == valor)
+                {
+                    return true; 
+                }
+
+                actual = actual.Der;
+            }
+
+            return false; 
+        }
     }
 }
+
